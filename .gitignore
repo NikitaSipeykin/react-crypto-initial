@@ -51,3 +51,4 @@ build/
 /save.dat
 /jre-minimal/
 /.mvn/wrapper/maven-wrapper.properties
+/node_modules/
