@@ -18,7 +18,7 @@ export default function AppHeader() {
   const [select, setSelect] = useState(false);
   const [coin, setCoin] = useState(null);
   const [modal, setModal] = useState(false);
-  const [drawer, setDrawer] = useState(false);
+  const [drawer, setDrawer] = useState(true);
   const { crypto } = useCrypto()
 
   useEffect(() => {
@@ -69,8 +69,9 @@ export default function AppHeader() {
       title="Add asset"
       onClose={() => setDrawer(false)}
       open={drawer}
+      destroyOnHidden
     >
-      <AddAssetForm />
+      <AddAssetForm onClose={() => setDrawer(false)}/>
     </Drawer>
   </Layout.Header>)
 }
